@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
 import { ArrowLink } from "@/components/Links";
+import { Photo } from "@/components/Photo";
 
 export const metadata: Metadata = {
   title: "Ansatz",
@@ -47,39 +48,53 @@ export default function Ansatz() {
         </p>
       </PageHeader>
 
-      <div className="wrap border-t border-line pb-24 md:pb-32 xl:pb-40">
-        {abschnitte.map((a, i) => (
-          <section
-            key={a.id}
-            aria-labelledby={a.id}
-            className="grid gap-8 border-b border-line py-16 first:border-t-0 last:border-b-0 md:grid-cols-12 md:gap-8 md:py-24"
-          >
-            <h2 id={a.id} className="text-2xl md:col-span-4 md:text-3xl">
-              {a.titel}
-            </h2>
-            <div data-reveal className="space-y-6 md:col-span-7 md:col-start-6">
-              {a.text.map((t) => (
-                <p key={t} className="max-w-measure">
-                  {t}
-                </p>
-              ))}
-            </div>
-            {i === 1 && (
-              <figure className="md:col-span-7 md:col-start-6" data-reveal>
-                <blockquote className="max-w-measure">
-                  <p className="font-display text-2xl font-light leading-heading text-ink md:text-3xl">
-                    „Wer eine Abteilung führt, prägt sie länger, als jede Strategie dauert.“
-                  </p>
-                </blockquote>
-                <figcaption className="mt-4 text-base text-stone">Leitgedanke von Doctovip</figcaption>
-              </figure>
-            )}
-          </section>
-        ))}
+      <div className="wrap pb-24 md:pb-32">
+        <Photo
+          src="/images/einblick-2.webp"
+          alt="Schwarz-Weiß-Aufnahme eines lichtdurchfluteten Treppenhauses mit Glasdach"
+          width={1200}
+          height={750}
+          sizes="(min-width: 1280px) 1152px, 100vw"
+          priority
+          className="aspect-wide w-full rounded-panel object-cover md:aspect-banner"
+        />
       </div>
 
-      <section aria-labelledby="weiter" className="wrap border-t border-line pb-24 pt-16 md:pb-32 md:pt-24">
-        <h2 id="weiter" className="text-2xl md:text-3xl">
+      <div className="bg-white">
+        <div className="wrap">
+          {abschnitte.map((a, i) => (
+            <section
+              key={a.id}
+              aria-labelledby={a.id}
+              className="grid gap-8 border-line py-16 md:grid-cols-12 md:gap-8 md:py-24 [&:not(:first-child)]:border-t"
+            >
+              <h2 id={a.id} className="text-2xl md:col-span-4 md:text-h2">
+                {a.titel}
+              </h2>
+              <div data-reveal className="space-y-6 md:col-span-7 md:col-start-6">
+                {a.text.map((t) => (
+                  <p key={t} className="max-w-measure">
+                    {t}
+                  </p>
+                ))}
+              </div>
+              {i === 1 && (
+                <figure className="md:col-span-7 md:col-start-6" data-reveal>
+                  <blockquote className="max-w-measure">
+                    <p className="font-display text-2xl font-light leading-heading text-ink">
+                      „Wer eine Abteilung führt, prägt sie länger, als jede Strategie dauert.“
+                    </p>
+                  </blockquote>
+                  <figcaption className="mt-4 text-sm text-stone">Leitgedanke von Doctovip</figcaption>
+                </figure>
+              )}
+            </section>
+          ))}
+        </div>
+      </div>
+
+      <section aria-labelledby="weiter" className="wrap section">
+        <h2 id="weiter" className="text-2xl md:text-h2">
           Wie es weitergeht
         </h2>
         <div className="mt-8 flex flex-wrap gap-x-12 gap-y-4">

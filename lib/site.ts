@@ -14,6 +14,7 @@ export const nav = [
   { href: "/fuer-haeuser", label: "Für Häuser" },
   { href: "/fuer-aerzte", label: "Für Ärzte" },
   { href: "/partner", label: "Partner" },
+  { href: "/einblicke", label: "Einblicke" },
 ];
 
 export const positions = [

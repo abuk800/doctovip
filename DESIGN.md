@@ -1,100 +1,93 @@
-# DESIGN.md — Doctovip
+# DESIGN.md — Doctovip (Version 2)
 
-Einzige Quelle für alle Gestaltungswerte. Im Code (Tailwind-Theme, CSS) werden ausschließlich diese Tokens verwendet. Keine Ad-hoc-Farben, keine freien Schriftgrößen, keine zusätzlichen Radien.
+Einzige Quelle für alle Gestaltungswerte. Im Code (Tailwind-Theme, CSS) werden ausschließlich diese Tokens verwendet. Keine Ad-hoc-Farben, keine freien Schriftgrößen, keine zusätzlichen Radien. `tailwind.config.ts` und `app/globals.css` spiegeln diese Datei 1:1; die Standardpalette und alle Standardskalen sind ersetzt.
 
-Umsetzung: `tailwind.config.ts` (Theme ersetzt die Standardpalette vollständig) und `app/globals.css` (CSS-Variablen) spiegeln diese Datei 1:1.
+Kompositionsvorlage: Framer-Template „MedDocX“ (Aufbau, Bildanteil, Sektionsrhythmus, Komponententypen). Nicht übernommen: Blau, Montserrat/Inter, Stockfotos lächelnder Ärzte im Kittel, Pillen-Labels über Headlines, Glas- oder halbtransparente Karten, Sterne-Bewertungen, Avatar-Gruppen, automatische Karussells, Icon-Kacheln über Titeln, Datums-Pillen auf Bildern, erfundene Kennzahlen, Patientensprache, Social-Icons, Newsletter-Feld.
 
 ## Farben
 
 | Token | Hex | Verwendung |
 |---|---|---|
-| `ink` Tinte | `#121417` | Haupttext, die eine dunkle Sektion |
-| `paper` Papier | `#F7F7F5` | Hintergrund, Text auf Tinte |
-| `graphite` Graphit | `#3A3D42` | Sekundärtext auf hell, Initialflächen |
-| `stone` Stein | `#6B6F76` | Metadaten, nur auf Papier |
-| `line` Linie | `#DCDCD8` | Trennlinien auf Papier |
-| `brass` Messing | `#7E6236` | Einziger Akzent: Links, feine Linien, Fokus, Vorgehen-Nummern. Nie als Fläche |
+| `ink` Tinte | `#121417` | Haupttext, dunkle Flächen |
+| `paper` Papier | `#F7F7F5` | Grundhintergrund, Text auf Tinte |
+| `white` Weiß | `#FFFFFF` | Wechsel-Hintergrund zu Papier, Karten und Container auf Papier |
+| `mist` Nebel | `#EEEEEB` | Ruhige Kachelflächen |
+| `graphite` Graphit | `#3A3D42` | Fließtext auf hell, Sekundärtext |
+| `stone` Stein | `#6B6F76` | Metadaten (Datum), nur auf Papier und Weiß |
+| `line` Linie | `#DCDCD8` | Trennlinien auf hell |
+| `brass` Messing | `#7E6236` | Akzent auf hell: Links, feine Linien, Icons, Fokus, Nummern, zweite Hero-Zeile; Fläche nur bei der einen Fakten-Kachel |
+| `brass-light` Messing hell | `#B8A07A` | Nur auf Tinte: Linien, Links, Monogramm |
 
-Auf der dunklen Sektion: Text `paper`, Linien `paper` mit 24 % Deckkraft (`line-on-ink`, daraus abgeleitet, keine neue Farbe), Sekundärtext `paper` mit 72 % Deckkraft. Kein Messing auf Tinte (Kontrast zu gering).
+Auf Tinte: Text `paper`, Haarlinien `paper` mit 15 % Deckkraft, Sekundärtext `paper` mit 72 %.
+
+**Sektionsrhythmus (Startseite):** Papier und Weiß wechseln sich ab. Tinte genau zweimal: Diskretion und Abschluss-Banner. Zusätzlich je eine Tinte-Karte (MVZ) und eine Tinte-Kachel (Fakten) innerhalb heller Sektionen.
 
 Verboten: Verläufe, Glow, Glasmorphismus, radiale Auren, Lila, Cyan, Neon, Beige.
 
 ## Typografie
 
-- Display: **Newsreader** (variable, `opsz` aktiv), aufrecht, Gewicht 300 bis 400. Nie kursiv als Headline-Stil.
-- Text und UI: **Hanken Grotesk**, 400 und 500.
+- Display: **Newsreader** (variable, `opsz`), aufrecht, Gewicht 300 bis 400. Nie kursiv.
+- Text und UI: **Hanken Grotesk** 400 und 500.
 
-### Typoskala (rem)
+| Token | rem | px | Verwendung |
+|---|---|---|---|
+| `sm` | 0.9375 | 15 | Kleinster Text überhaupt: Navigation, Datum, Hinweise, Formularhinweise |
+| `base` | 1.125 | 18 | Listen, Tabellen, Kartentexte, Buttons, Formularfelder |
+| `body` | 1.1875 | 19 | Fließtext |
+| `xl` | 1.5 | 24 | H3, Partnernamen, Positionsnamen in Tabellen |
+| `2xl` | 2.25 | 36 | Zitat mobil, große Zwischentitel |
+| `3xl` | 3.25 | 52 | Fakten-Zahlen, Vorgehen-Nummern |
+| `4xl` | 5.25 | 84 | Obergrenze H1 |
+| `h1` | `clamp(3rem, 6vw, 5.25rem)` | | Newsreader 300, Zeilenhöhe 1.1 |
+| `h2` | `clamp(2.25rem, 4vw, 3.25rem)` | | Newsreader 300, Zeilenhöhe 1.15 |
+| `wordmark` | 15vw | | Nur die dekorative Hero-Wortmarke |
 
-| Token | rem | Verwendung |
-|---|---|---|
-| `sm` | 0.875 | Definiert, aber nicht im Einsatz: 14 px liegt unter dem UI-Minimum von 15 px |
-| `base` | 1 | UI, Navigation (16 px), Formulare, Footer |
-| `lg` | 1.125 | Fließtext |
-| `xl` | 1.375 | Lead, Positionsnamen, h3 |
-| `2xl` | 1.75 | h2 klein, Zitat mobil |
-| `3xl` | 2.25 | h2 |
-| `4xl` | 3 | h2 groß, Zitat |
-| `5xl` | 3.75 | H1 Obergrenze |
-
-Kleinste eingesetzte Stufe ist `base` (16 px). Versalien-Labels nutzen `base` mit Tracking 0.12 em.
-
-- H1: `clamp(2.5rem, 5vw, 3.75rem)`, Newsreader 300, Zeilenhöhe 1.1.
-- H2: `3xl` bis `4xl`, Newsreader 300, Zeilenhöhe 1.15.
-- H3: `xl`, Newsreader 400, Zeilenhöhe 1.3.
-- Fließtext: `lg` (1.125 rem), Zeilenhöhe 1.6, `max-width: 65ch`, Tracking normal.
-- Tracking weit: Wortmarke 0.18 em (Nav), Labels in Versalien 0.12 em. Nirgends sonst.
-- `text-wrap: balance` auf Headlines, `text-wrap: pretty` auf Absätzen. Linksbündig.
+- H3 1.5 rem Newsreader 400. H1 ist immer deutlich größer als H2.
+- Fließtext 1.1875 rem, Zeilenhöhe 1.6, `max-width: 65ch`, Graphit oder Tinte, nie heller als Graphit.
+- Zweifarbige Headline nur im Hero (zweite Zeile Messing).
+- Tracking weit nur für Wortmarke (0.18 em) und sehr kurze Versalien-Labels (0.12 em).
+- `text-wrap: balance` auf Headlines, `pretty` auf Absätzen. Linksbündig (Ausnahme: zentrierte Sektionsüberschriften nach Vorlage).
 
 ## Abstand (px)
 
-`4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96 / 128 / 160`
-
-Tailwind-Keys: `1`=4, `2`=8, `3`=12, `4`=16, `6`=24, `8`=32, `12`=48, `16`=64, `24`=96, `32`=128, `40`=160.
-
-Regeln:
-- Seitenrand: mobil 20 px (Ausnahme der Skala, vorgegeben), ab 768 px 32 px, ab 1280 px 64 px (`gutter`).
-- Sektionsabstand vertikal: mobil 96, Desktop 128 bis 160.
-- Über einer Sektionsüberschrift immer mehr Abstand als darunter (z. B. 128 oben, 32 darunter).
-- Zusammengehöriges 8 bis 16, getrennte Gruppen 48 und mehr.
+`4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96 / 128 / 160`, dazu `nav` = 72 (Höhe Navigationsleiste), `mono` = 480 (großes Monogramm), `gutter` = 20 (Seitenrand mobil). Seitenrand ab 768: 32, ab 1280: 64. Sektionsabstand mobil 96, Tablet 128, Desktop 160. Über einer Sektionsüberschrift mehr Abstand als darunter.
 
 ## Radien
 
-- `none` 0: Flächen, Bilder, Porträts.
-- `control` 2 px: Buttons, Inputs.
-- Keine weiteren.
+| Token | px | Verwendung |
+|---|---|---|
+| `nav` | 16 | Navigationsleiste |
+| `panel` | 20 | Große Bild- und Containerflächen (Arbeitsweise-Bild, Weiß-Container, Tinte-Karte) |
+| `banner` | 24 | Abschluss-Banner |
+| `card` | 16 | Karten, Fakten-Kacheln, Partnerbilder |
+| `tile` | 12 | Info-Karten im Hero, Bilder in Karten, Einblicke-Bilder |
+| `input` | 8 | Formularfelder |
+| `pill`, `full` | 9999 | Buttons, Kreise |
 
 ## Schatten
 
-Keine. Trennung über Linien (1 px `line`) und Weißraum.
+Keine. Trennung über 1 px `line` und Weißraum. Karten auf Bildern sind deckend (Weiß) mit 1 px Linie.
+
+## Komponenten
+
+- **Pillen-Button:** Tinte-Pille, Höhe 48, Text `base` 500 in Papier, rechts innen ein 32-px-Kreis in Papier mit Tinte-Pfeil. Auf Tinte invertiert (Papier-Pille, Tinte-Kreis). Outline-Variante: 1 px Tinte-Rand, transparent, gleicher Pfeil-Kreis.
+- **Textlink:** Messing (auf Tinte `brass-light`), Unterstreichung 1 px, Pfeil „→“.
+- **Logo:** Monogramm „D“ (Newsreader 400) im 1-px-Messing-Kreis, 32 px in der Navigation, daneben Wortmarke „DOCTOVIP“ (Hanken 500, Versalien, Tracking 0.18 em). Varianten hell (Tinte, Messing) und dunkel (Papier, Messing hell).
+- **Info-Karte:** Weiß, 1 px Linie, Radius `tile`, Padding 24.
+- **Linienicons:** 24 px, Strichstärke 1.5, Messing, inline links neben dem Titel. Nie als Kachel über dem Titel.
+- **Akkordeon:** Weiß-Container, Haarlinien, rechts 32-px-Kreis (1 px Linie) mit Plus/Minus, erste Frage offen.
 
 ## Motion
 
-- Einziger Effekt: Einblenden, `opacity` 0 → 1, 500 ms, `ease-out` (`cubic-bezier(0, 0, 0.2, 1)`).
-- Kein Federn, kein Überschwingen, keine Parallax, keine Laufbänder, keine Counter.
-- Inhalte sind ohne JS sichtbar. Ausgeblendet wird erst, nachdem JS läuft (`html.js`-Klasse) und der Browser `IntersectionObserver` kennt. Sicherheitsnetz: nach 2 s werden alle Elemente sichtbar.
+- Inhalte sind per CSS immer sichtbar. JS markiert nur Elemente, die beim Laden unterhalb des sichtbaren Bereichs liegen (`reveal-pending`).
+- Reveal: `opacity` 0 → 1 und `translateY` 8 px → 0, 400 ms, `ease-out`. Auslösung vor dem Sichtbarwerden (IntersectionObserver, `rootMargin: 0px 0px 20% 0px`). Elemente oberhalb des Viewports werden sofort eingeblendet.
+- Zusätzlich erlaubt: Bild-Zoom 1.02 über 600 ms beim Hover auf Einblicke-Karten, Akkordeon-Höhe 250 ms ease-out, Fade 200 ms beim mobilen Menü. Sonst nichts.
 - `prefers-reduced-motion: reduce`: keine Animation.
-- Mobiles Menü: nur Fade (200 ms).
 
 ## Fokus
 
-2 px Messing-Outline, 2 px Offset, auf allen interaktiven Elementen. Auf Tinte: Outline in Papier (Messing hätte dort zu wenig Kontrast).
-
-## Komponenten-Regeln
-
-- Button primär: Fläche Tinte, Text Papier, Radius 2 px, Höhe 48 px, Padding 24 px horizontal. Hover: Fläche Graphit.
-- Button auf Tinte: Fläche Papier, Text Tinte.
-- Textlink: Messing, Unterstreichung 1 px, Offset 4 px. Pfeil als Textzeichen „→“.
-- Inputs: Rahmen 1 px `stone` (Kontrast über 3:1, `line` wäre zu schwach), Radius 2 px, Label immer sichtbar darüber.
-- Fehlermeldungen: Klartext in Tinte mit Messing-Linie links ist verboten (Seitenstreifen). Stattdessen Text in Tinte unter dem Feld, Feldrahmen Tinte 2 px.
-- Zeilenlisten (Positionen, Diskretion, Mandate): Linien 1 px, keine Karten.
+2 px Messing-Outline, 2 px Offset. Auf Tinte `brass-light`.
 
 ## Bild
 
-Architektur, Licht, Material, Schwarz-Weiß-Porträts. Radius 0. Kein Overlay. Fehlt ein Bild: ruhige Graphit-Fläche (Porträt mit Initialen) oder weglassen. Kein leeres `src`.
-
-## Layout
-
-- Maximale Seitenbreite 80 rem (`page`), Lesemaß 65 ch (`measure`), Headline-Breite 26 ch (`heading`), Porträt-Breite 20 rem (`portrait`, Seitenverhältnis 4:5).
-- Breakpoints: 768 (`md`), 1024 (`lg`), 1280 (`xl`). Desktop-Navigation ab `lg`.
-- Navigation: Wortmarke Hanken Grotesk 500, Versalien, Tracking 0.18 em. Links 16 px.
+Alle Bilder in Schwarz-Weiß, abgebildet auf die Palette (Schwarz → Tinte, Weiß → Papier). Keine Kittel, Stethoskope, Händeschütteln, Teamfotos, Overlays, Logos. Motive: Architektur, Licht, Material, Porträts. Dokumentation in `IMAGES.md`. Fehlt ein Bild: Graphit-Fläche mit Monogramm.

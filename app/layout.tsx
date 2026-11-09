@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { RevealInit } from "@/components/RevealInit";
 import { site } from "@/lib/site";
+import { hasSamples } from "@/content";
 
 // Selbst gehostet (OFL): Newsreader variable mit opsz- und wght-Achse, Hanken Grotesk 400 und 500.
 // Keine Anfrage an Google-Server, daher DSGVO-unkritisch.
@@ -29,6 +30,8 @@ export const metadata: Metadata = {
   description:
     "Doctovip besetzt ärztliche Leitungs- und Geschäftsführungspositionen in Kliniken und MVZ. Persönlich begleitet, vertraulich geführt, ohne öffentliche Ausschreibung.",
   openGraph: { siteName: "Doctovip", locale: "de_DE", type: "website" },
+  // Solange Beispielinhalte existieren (content/*, isSample), bleibt die Seite für Suchmaschinen unsichtbar.
+  robots: hasSamples ? { index: false, follow: false } : undefined,
 };
 
 export const viewport: Viewport = { themeColor: "#F7F7F5", width: "device-width", initialScale: 1 };
@@ -39,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <a
           href="#inhalt"
-          className="fixed left-gutter top-2 z-50 -translate-y-24 rounded-control bg-ink px-4 py-3 text-base text-paper focus:translate-y-0"
+          className="fixed left-gutter top-2 z-50 -translate-y-24 rounded-pill bg-ink px-6 py-3 text-base text-paper focus:translate-y-0"
         >
           Zum Inhalt
         </a>

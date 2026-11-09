@@ -4,66 +4,82 @@
 
 @layer base {
   html {
-    @apply bg-paper font-text text-base font-normal text-ink antialiased;
+    @apply bg-paper font-text font-normal text-ink antialiased;
+    font-size: 100%;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
   }
-  body {
-    @apply bg-paper leading-body;
-  }
+  body { @apply bg-paper text-body leading-body text-ink; }
   h1, h2, h3 {
     @apply font-display text-ink;
     font-optical-sizing: auto;
     text-wrap: balance;
   }
   h1 { @apply text-h1 font-light leading-display; }
-  h2 { @apply text-3xl font-light leading-heading md:text-4xl; }
+  h2 { @apply text-h2 font-light leading-heading; }
   h3 { @apply text-xl font-normal leading-heading; }
-  p, li, dd { text-wrap: pretty; }
-  p { @apply text-lg leading-body; }
-  [id] { scroll-margin-top: theme("spacing.24"); }
+  p, li, dd, td { text-wrap: pretty; }
+  p { @apply text-body leading-body text-graphite; }
+  [id] { scroll-margin-top: theme("spacing.32"); }
   :focus-visible { outline: 2px solid theme("colors.brass"); outline-offset: 2px; }
-  .on-ink :focus-visible { outline-color: theme("colors.paper"); }
-  .on-ink h1, .on-ink h2, .on-ink h3 { @apply text-paper; }
+  .on-ink :focus-visible { outline-color: theme("colors.brass-light"); }
   ::selection { background: theme("colors.ink"); color: theme("colors.paper"); }
+    .on-ink :where(h1, h2, h3, p) { @apply text-paper; }
 }
 
 @layer components {
   .wrap { @apply mx-auto w-full max-w-page px-gutter md:px-8 xl:px-16; }
   .section { @apply py-24 md:py-32 xl:py-40; }
   .measure { @apply max-w-measure; }
-  .label { @apply text-base font-medium uppercase tracking-label; }
 
   .tlink {
-    @apply text-brass underline decoration-1 underline-offset-4 hover:text-ink;
+    @apply text-base font-medium text-brass underline underline-offset-4 hover:text-ink;
     text-decoration-thickness: 1px;
   }
-  .on-ink .tlink { @apply text-paper hover:text-paper/72; }
+  .on-ink .tlink { @apply text-brass-light hover:text-paper; }
 
-  .btn {
-    @apply inline-flex h-12 items-center justify-center rounded-control bg-ink px-6 text-base font-medium text-paper hover:bg-graphite;
+  /* Pillen-Button mit Pfeil im Kreis */
+  .pill {
+    @apply inline-flex h-12 items-center gap-4 rounded-pill bg-ink pl-6 pr-2 text-base font-medium text-paper hover:bg-graphite;
   }
-  .on-ink .btn { @apply bg-paper text-ink hover:bg-paper/72; }
+  .pill .dot { @apply inline-flex h-8 w-8 items-center justify-center rounded-full bg-paper text-ink; }
+  .pill-outline { @apply bg-transparent text-ink hover:bg-mist; box-shadow: none; border: 1px solid theme("colors.ink"); padding-left: calc(theme("spacing.6") - 1px); }
+  .pill-outline .dot { @apply bg-ink text-paper; }
+  .on-ink .pill { @apply bg-paper text-ink hover:bg-paper/72; }
+  .on-ink .pill .dot { @apply bg-ink text-paper; }
 
   .field {
-    @apply h-12 w-full rounded-control border border-stone bg-paper px-4 text-base text-ink;
+    @apply h-12 w-full rounded-input border border-stone bg-white px-4 text-base text-ink;
   }
   textarea.field { @apply h-auto py-3 leading-body; }
   .field[aria-invalid="true"] { @apply border-2 border-ink; }
+
+  /* Akkordeon: Höhe 250 ms */
+  .acc-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows theme("transitionDuration.accordion") theme("transitionTimingFunction.DEFAULT");
+  }
+  .acc-panel[data-open="true"] { grid-template-rows: 1fr; }
+  .acc-panel > div { overflow: hidden; }
 }
 
-/* Einblenden: Inhalte sind ohne JS sichtbar. Erst wenn RevealInit läuft (html.js), werden sie vorbereitet. */
-html.js [data-reveal] {
+/* Reveal: Inhalte sind immer sichtbar. Nur was beim Laden unterhalb des Viewports liegt, wird von JS vorbereitet. */
+.reveal-pending {
   opacity: 0;
-  transition: opacity theme("transitionDuration.reveal") theme("transitionTimingFunction.DEFAULT");
+  transform: translateY(8px);
+  transition:
+    opacity theme("transitionDuration.reveal") theme("transitionTimingFunction.DEFAULT"),
+    transform theme("transitionDuration.reveal") theme("transitionTimingFunction.DEFAULT");
 }
-html.js [data-reveal].is-in { opacity: 1; }
+.reveal-pending.is-in { opacity: 1; transform: none; }
 
 @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
 .fade-in { animation: fade-in theme("transitionDuration.DEFAULT") theme("transitionTimingFunction.DEFAULT") both; }
 
 @media (prefers-reduced-motion: reduce) {
-  html.js [data-reveal] { opacity: 1; transition: none; }
+  .reveal-pending { opacity: 1; transform: none; transition: none; }
   .fade-in { animation: none; }
-  * { scroll-behavior: auto !important; }
+  .acc-panel { transition: none; }
+  * { scroll-behavior: auto !important; transition-duration: 0s !important; }
 }

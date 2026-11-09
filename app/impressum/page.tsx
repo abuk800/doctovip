@@ -6,13 +6,11 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
+// BEISPIELINHALT: Vor Livegang durch den geprüften Rechtstext ersetzen (siehe SAMPLES.md).
 export default function Page() {
   return (
-    <>
-      <PageHeader title="Impressum">
-        {/* TODO: Vor Livegang durch geprüften Rechtstext ersetzen */}
-        <p>[Platzhalter] Dieser Text wird vor Veröffentlichung der Seite durch den geprüften Rechtstext ersetzt.</p>
-      </PageHeader>
-    </>
+    <PageHeader title="Impressum">
+      <p>Angaben gemäß § 5 DDG. Doctovip, Musterstraße 1, 10000 Berlin. Vertreten durch die Geschäftsführung. Kontakt: kontakt@doctovip.de.</p>
+    </PageHeader>
   );
 }

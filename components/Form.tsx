@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, type FormEvent } from "react";
+import { ArrowIcon } from "./Icons";
 
 export type FieldDef = {
   name: string;
@@ -110,7 +111,7 @@ export function Form({
                 <input {...common} type={f.type ?? "text"} />
               )}
               {err && (
-                <p id={`${fid}-err`} className="mt-2 text-base text-ink">
+                <p id={`${fid}-err`} className="mt-2 text-sm text-ink">
                   {err}
                 </p>
               )}
@@ -119,10 +120,13 @@ export function Form({
         })}
       </div>
       <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
-        <button type="submit" className="btn">
+        <button type="submit" className="pill">
           {submitLabel}
+          <span className="dot">
+            <ArrowIcon />
+          </span>
         </button>
-        {note && <p className="max-w-measure text-base text-graphite">{note}</p>}
+        {note && <p className="max-w-measure text-sm text-graphite">{note}</p>}
       </div>
     </form>
   );

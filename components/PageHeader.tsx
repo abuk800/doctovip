@@ -4,7 +4,7 @@ export function PageHeader({ title, children }: { title: string; children?: Reac
   return (
     <section className="wrap pb-16 pt-16 md:pb-24 md:pt-24 xl:pt-32">
       <h1 className="max-w-heading">{title}</h1>
-      {children && <div className="mt-8 max-w-measure space-y-4 text-graphite [&>p]:text-xl">{children}</div>}
+      {children && <div className="mt-8 max-w-measure space-y-4">{children}</div>}
     </section>
   );
 }
