@@ -89,7 +89,7 @@ const config: Config = {
     scale: { 100: "1", 102: "1.02" },
     transitionDuration: { DEFAULT: "200ms", accordion: "250ms", reveal: "400ms", zoom: "600ms" },
     transitionTimingFunction: { DEFAULT: "cubic-bezier(0, 0, 0.2, 1)" },
-    extend: { inset: { figure: "57%" }, width: { info: "15rem" } },
+    extend: { inset: { figure: "58%" }, width: { info: "15rem" } },
   },
   plugins: [],
 };

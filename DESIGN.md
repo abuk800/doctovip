@@ -18,7 +18,7 @@ Kompositionsvorlage: Framer-Template „MedDocX“ (Aufbau, Bildanteil, Sektions
 | `brass` Messing | `#7E6236` | Akzent auf hell: Links, feine Linien, Icons, Fokus, Nummern, zweite Hero-Zeile; Fläche nur bei der einen Fakten-Kachel |
 | `brass-light` Messing hell | `#B8A07A` | Nur auf Tinte: Linien, Links, Monogramm |
 
-Version 3: Die Hero-Wortmarke steht bei 6 % Deckkraft (Token `opacity-6`). Die Hero-Info-Karten sind höchstens 15 rem (`max-w-info`) breit, das Hero-Porträt sitzt bei `left-figure` (57 %), damit die Karten die Figur nicht überdecken. Titel der Anlässe-Zeilen: `xl` (1.5 rem), da 1.375 rem nicht in der Skala liegt. Die Desktop-Navigation beginnt ab `lg`, weil sie nur drei Links hat.
+Version 3: Die Hero-Wortmarke steht bei 6 % Deckkraft (Token `opacity-6`). Die Hero-Info-Karten sind höchstens 15 rem (`max-w-info`) breit, das Hero-Porträt sitzt bei `left-figure` (58 %, Höhe 80 %), damit die Karten die Figur nicht überdecken. Titel der Anlässe-Zeilen: `xl` (1.5 rem), da 1.375 rem nicht in der Skala liegt. Die Desktop-Navigation beginnt ab `lg`, weil sie nur drei Links hat.
 
 Auf Tinte: Text `paper`, Haarlinien `paper` mit 15 % Deckkraft, Sekundärtext `paper` mit 72 %.
 

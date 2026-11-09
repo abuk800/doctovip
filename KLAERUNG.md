@@ -127,6 +127,6 @@ Briefing: „Darüber hinaus soll eine neue Marke (Doctovip) etabliert werden, d
 
 | Datei | Motiv | Quelle | Lizenz | Einsatz |
 |---|---|---|---|---|
-| hero-portrait.webp | Mann im dunklen Anzug, freigestellt, Schwarz-Weiß (Stimmungsbild) | https://www.pexels.com/photo/10041269/ | Pexels-Lizenz | Startseite, Hero |
+| hero-portrait.webp | Frau im hellen Blazer, freigestellt, Schwarz-Weiß (Stimmungsbild) | Vom Auftraggeber bereitgestellt | Nutzungsrechte vor Livegang klären | Startseite, Hero |
 | arbeitsweise.webp | Helle, geschwungene Treppe in weißem Raum, Schwarz-Weiß | https://www.pexels.com/photo/5184791/ | Pexels-Lizenz | Startseite, Arbeitsweise; Für Ärzte |
 | mvz.webp | Heller Flur mit Sitzreihe am Fenster, Schwarz-Weiß | https://www.pexels.com/photo/19921278/ | Pexels-Lizenz | Startseite, MVZ-Karte; Ansatz; Für Häuser |

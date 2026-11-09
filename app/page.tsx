@@ -38,7 +38,7 @@ const diskretion = [
   "Unterlagen gehen nur mit ausdrücklicher Zustimmung weiter.",
 ];
 
-const heroAlt = "Stimmungsbild einer Führungspersönlichkeit im dunklen Anzug, Schwarz-Weiß";
+const heroAlt = "Stimmungsbild: lächelnde Frau im hellen Blazer, Schwarz-Weiß";
 
 export default function Home() {
   return (
@@ -54,11 +54,11 @@ export default function Home() {
 
         <div className="wrap relative z-10 xl:grid xl:min-h-hero xl:grid-cols-12">
           {/* Porträt: mobil gestapelt, ab xl unten bündig neben dem Textblock */}
-          <div className="relative mx-auto w-2/3 max-w-portrait pt-12 xl:absolute xl:bottom-0 xl:left-figure xl:mx-0 xl:h-5/6 xl:w-auto xl:max-w-none xl:-translate-x-1/2 xl:pt-0">
+          <div className="relative mx-auto w-2/3 max-w-portrait pt-12 xl:absolute xl:bottom-0 xl:left-figure xl:mx-0 xl:h-4/5 xl:w-auto xl:max-w-none xl:-translate-x-1/2 xl:pt-0">
             <Photo
               src="/images/hero-portrait.webp"
               alt={heroAlt}
-              width={922}
+              width={930}
               height={1400}
               sizes="(min-width: 1280px) 30vw, 66vw"
               priority
