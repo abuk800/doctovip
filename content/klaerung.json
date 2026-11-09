@@ -1,0 +1,440 @@
+{
+ "vorschlaege": [
+  {
+   "aussage": "Für Positionen, die man nicht ausschreibt.",
+   "seite": "/",
+   "ort": "Startseite, Hero (Überschrift)"
+  },
+  {
+   "aussage": "Doctovip besetzt ärztliche Leitungs- und Geschäftsführungspositionen in Kliniken und MVZ. Persönlich, vertraulich und ausschließlich auf Leitungsebene.",
+   "seite": "/",
+   "ort": "Startseite, Hero (Text)"
+  },
+  {
+   "aussage": "Vertrauliches Gespräch für Ärztinnen und Ärzte",
+   "seite": "/",
+   "ort": "Startseite, Hero (Textlink)"
+  },
+  {
+   "aussage": "Keine Ausschreibung. Keine Datenbank. Kein Aufsehen.",
+   "seite": "/",
+   "ort": "Startseite, Hero (Info-Karte)"
+  },
+  {
+   "aussage": "Wenige Mandate. Jedes persönlich geführt.",
+   "seite": "/",
+   "ort": "Startseite, Arbeitsweise (Überschrift)"
+  },
+  {
+   "aussage": "Wer eine Abteilung, ein Haus oder ein MVZ medizinisch führt, prägt es über Jahre. Deshalb begleiten wir nur wenige Mandate gleichzeitig. Jedes liegt vom ersten Gespräch bis nach dem ersten Arbeitstag in der Hand eines Partners.",
+   "seite": "/",
+   "ort": "Startseite, Arbeitsweise (Text)"
+  },
+  {
+   "aussage": "Ein Partner, ein Mandat. Vom ersten Gespräch bis nach dem ersten Arbeitstag.",
+   "seite": "/",
+   "ort": "Startseite, Arbeitsweise (Bild-Karte)"
+  },
+  {
+   "aussage": "0 Öffentliche Ausschreibungen.",
+   "seite": "/",
+   "ort": "Startseite, Arbeitsweise (Fakten-Kachel 2)"
+  },
+  {
+   "aussage": "Fachliche und personelle Verantwortung für eine Abteilung.",
+   "seite": "/",
+   "ort": "Startseite, Positionen (Karte Chefärztin, Chefarzt, Positionsbeschreibung)"
+  },
+  {
+   "aussage": "Medizinische Gesamtverantwortung für ein Haus.",
+   "seite": "/",
+   "ort": "Startseite, Positionen (Karte Ärztliche Direktion, Positionsbeschreibung)"
+  },
+  {
+   "aussage": "Ärztliche Kompetenz in der Unternehmensleitung.",
+   "seite": "/",
+   "ort": "Startseite, Positionen (Karte Medizinische Geschäftsführung, Positionsbeschreibung)"
+  },
+  {
+   "aussage": "Wird diese Position frei, ist der Betrieb betroffen.",
+   "seite": "/",
+   "ort": "Startseite, Positionen (MVZ-Karte, Folgerung)"
+  },
+  {
+   "aussage": "Wann Häuser eine Leitungsposition vertraulich besetzen.",
+   "seite": "/",
+   "ort": "Startseite, Typische Anlässe (Überschrift)"
+  },
+  {
+   "aussage": "Die Anlässe unterscheiden sich, der Anspruch an Diskretion ist derselbe.",
+   "seite": "/",
+   "ort": "Startseite, Typische Anlässe (Einleitung)"
+  },
+  {
+   "aussage": "Eine Chefarztposition wird planbar frei und soll ohne Unruhe übergeben werden.",
+   "seite": "/",
+   "ort": "Startseite, Typische Anlässe (Zeile „Altersnachfolge“, allgemeine Marktsituation, keine Referenz)"
+  },
+  {
+   "aussage": "Ein Haus baut einen Schwerpunkt auf oder um und braucht dafür die passende Leitung.",
+   "seite": "/",
+   "ort": "Startseite, Typische Anlässe (Zeile „Neuausrichtung einer Abteilung“, allgemeine Marktsituation, keine Referenz)"
+  },
+  {
+   "aussage": "Ohne benannte ärztliche Leitung ist der Betrieb eines MVZ betroffen.",
+   "seite": "/",
+   "ort": "Startseite, Typische Anlässe (Zeile „Freie ärztliche Leitung im MVZ“, allgemeine Marktsituation, keine Referenz)"
+  },
+  {
+   "aussage": "Nach Umstrukturierung oder Trägerwechsel wird ärztliche Kompetenz in der Unternehmensleitung gebraucht.",
+   "seite": "/",
+   "ort": "Startseite, Typische Anlässe (Zeile „Veränderung in der Geschäftsführung“, allgemeine Marktsituation, keine Referenz)"
+  },
+  {
+   "aussage": "Eine Position soll neu besetzt werden, bevor sie im Haus bekannt ist.",
+   "seite": "/",
+   "ort": "Startseite, Typische Anlässe (Zeile „Vertrauliche Neubesetzung“, allgemeine Marktsituation, keine Referenz)"
+  },
+  {
+   "aussage": "Vier Schritte vom ersten Gespräch bis zum Wechsel.",
+   "seite": "/",
+   "ort": "Startseite, Vorgehen (Überschrift)"
+  },
+  {
+   "aussage": "Wir verstehen das Haus, die Abteilung und die Erwartungen an die Position.",
+   "seite": "/",
+   "ort": "Startseite, Vorgehen (Schritt 1, Analyse)"
+  },
+  {
+   "aussage": "Wir sprechen geeignete Persönlichkeiten gezielt und vertraulich an.",
+   "seite": "/",
+   "ort": "Startseite, Vorgehen (Schritt 2, Direktansprache)"
+  },
+  {
+   "aussage": "Sie lernen wenige, sorgfältig geprüfte Kandidatinnen und Kandidaten kennen.",
+   "seite": "/",
+   "ort": "Startseite, Vorgehen (Schritt 3, Auswahl)"
+  },
+  {
+   "aussage": "Wir begleiten Vertragsverhandlung, Wechsel und die ersten Monate.",
+   "seite": "/",
+   "ort": "Startseite, Vorgehen (Schritt 4, Begleitung)"
+  },
+  {
+   "aussage": "Unsere Mandate erscheinen in keiner Stellenbörse.",
+   "seite": "/",
+   "ort": "Startseite, Diskretion (Überschrift)"
+  },
+  {
+   "aussage": "Für Häuser und für Kandidaten gilt dasselbe Prinzip: Niemand erfährt etwas, das er nicht erfahren soll.",
+   "seite": "/",
+   "ort": "Startseite, Diskretion (Text)"
+  },
+  {
+   "aussage": "Keine öffentlichen Ausschreibungen.",
+   "seite": "/",
+   "ort": "Startseite, Diskretion (Liste)"
+  },
+  {
+   "aussage": "Keine Kandidatendatenbank.",
+   "seite": "/",
+   "ort": "Startseite, Diskretion (Liste)"
+  },
+  {
+   "aussage": "Ansprache ausschließlich durch den verantwortlichen Partner.",
+   "seite": "/",
+   "ort": "Startseite, Diskretion (Liste)"
+  },
+  {
+   "aussage": "Unterlagen gehen nur mit ausdrücklicher Zustimmung weiter.",
+   "seite": "/",
+   "ort": "Startseite, Diskretion (Liste)"
+  },
+  {
+   "aussage": "Das hängt von Position, Fachrichtung und Region ab. Eine realistische Einschätzung geben wir nach dem ersten Gespräch.",
+   "seite": "/",
+   "ort": "Startseite, Häufige Fragen (Frage „Wie lange dauert eine Besetzung?“)"
+  },
+  {
+   "aussage": "Wir schreiben nicht öffentlich aus, führen keine Kandidatendatenbank und geben Unterlagen nur mit ausdrücklicher Zustimmung weiter.",
+   "seite": "/",
+   "ort": "Startseite, Häufige Fragen (Frage „Wie stellen Sie die Vertraulichkeit sicher?“)"
+  },
+  {
+   "aussage": "Fragen Sie einen vertraulichen Rückruf an. Für ein erstes Gespräch brauchen wir keinen Lebenslauf.",
+   "seite": "/",
+   "ort": "Startseite, Häufige Fragen (Frage „Ich bin in einer Leitungsposition und offen für Neues. Wie gehe ich vor?“)"
+  },
+  {
+   "aussage": "Ein erstes Gespräch ist vertraulich. Sie entscheiden, wie es weitergeht.",
+   "seite": "/",
+   "ort": "Startseite, Abschluss-Banner"
+  },
+  {
+   "aussage": "Wenige Mandate, nur Leitungsebene, ohne Ausschreibung.",
+   "seite": "/ansatz",
+   "ort": "Ansatz, Überschrift"
+  },
+  {
+   "aussage": "Unser Ansatz folgt aus der Aufgabe: Leitungspositionen besetzen wir kuratiert und diskret, im persönlichen Gespräch.",
+   "seite": "/ansatz",
+   "ort": "Ansatz, Einleitung"
+  },
+  {
+   "aussage": "Eine Leitungsposition ist keine größere Version einer Facharztstelle. Wer eine Abteilung, ein Haus oder ein MVZ führt, entscheidet über Personal, Qualität und Kultur. Die Erwartungen der Träger, der Teams und der Kandidatin oder des Kandidaten greifen hier ineinander.",
+   "seite": "/ansatz",
+   "ort": "Ansatz, Warum nur Leitungsebene (Absatz 1, Begründung der Positionierung)"
+  },
+  {
+   "aussage": "Diese Besetzungen folgen eigenen Regeln. Die Zahl möglicher Persönlichkeiten ist klein, jede ist in ihrem Haus sichtbar, und ein Wechsel hat Folgen für viele Menschen. Deshalb arbeiten wir ausschließlich auf dieser Ebene.",
+   "seite": "/ansatz",
+   "ort": "Ansatz, Warum nur Leitungsebene (Absatz 2, Begründung der Positionierung)"
+  },
+  {
+   "aussage": "Wir führen nur so viele Mandate, wie ein Partner persönlich begleiten kann. Das bedeutet: Der Partner, der Ihr Haus im ersten Gespräch kennenlernt, spricht auch mit den Kandidatinnen und Kandidaten und sitzt bei der Vertragsverhandlung mit am Tisch.",
+   "seite": "/ansatz",
+   "ort": "Ansatz, Warum wenige Mandate (Absatz 1)"
+  },
+  {
+   "aussage": "Ein Mandat endet für uns nicht mit der Unterschrift. Wir bleiben in den ersten Monaten ansprechbar, für das Haus und für die neue Leitung.",
+   "seite": "/ansatz",
+   "ort": "Ansatz, Warum wenige Mandate (Absatz 2)"
+  },
+  {
+   "aussage": "„Wer eine Abteilung führt, prägt sie länger, als jede Strategie dauert.“",
+   "seite": "/ansatz",
+   "ort": "Ansatz, Zitat-Element (typografisch, ohne Urheber)"
+  },
+  {
+   "aussage": "Wir schreiben keine Stelle aus. Stattdessen entwickeln wir aus dem Profil der Position eine überschaubare Liste von Persönlichkeiten, die dafür in Frage kommen. Jede Ansprache erfolgt durch den verantwortlichen Partner, persönlich und ohne Hinweis auf das suchende Haus, solange die Kandidatin oder der Kandidat nicht zugestimmt hat.",
+   "seite": "/ansatz",
+   "ort": "Ansatz, Wie die Direktansprache funktioniert (Absatz 1)"
+  },
+  {
+   "aussage": "Wer angesprochen wird, entscheidet allein, ob ein Gespräch stattfindet. Unterlagen geben wir nur mit ausdrücklicher Zustimmung weiter. Eine Kandidatendatenbank führen wir nicht.",
+   "seite": "/ansatz",
+   "ort": "Ansatz, Wie die Direktansprache funktioniert (Absatz 2)"
+  },
+  {
+   "aussage": "Sie suchen an der Spitze eines Hauses, einer Abteilung oder eines MVZ. Wir führen die Suche diskret, damit sie im Haus nicht früher bekannt wird, als Sie es wollen.",
+   "seite": "/fuer-haeuser",
+   "ort": "Für Häuser, Einleitung"
+  },
+  {
+   "aussage": "Im ersten Gespräch klären wir Aufgabe, Struktur und Erwartungen. Daraus entsteht ein Profil, das Sie freigeben.",
+   "seite": "/fuer-haeuser",
+   "ort": "Für Häuser, Ablauf (Schritt 1, Analyse)"
+  },
+  {
+   "aussage": "Wir sprechen geeignete Persönlichkeiten an, ohne Ihr Haus zu nennen, solange niemand zugestimmt hat.",
+   "seite": "/fuer-haeuser",
+   "ort": "Für Häuser, Ablauf (Schritt 2, Direktansprache)"
+  },
+  {
+   "aussage": "Sie erhalten wenige, sorgfältig geprüfte Vorschläge und lernen die Kandidatinnen und Kandidaten persönlich kennen.",
+   "seite": "/fuer-haeuser",
+   "ort": "Für Häuser, Ablauf (Schritt 3, Auswahl)"
+  },
+  {
+   "aussage": "Wir begleiten Vertragsverhandlung und Wechsel und bleiben in den ersten Monaten ansprechbar.",
+   "seite": "/fuer-haeuser",
+   "ort": "Für Häuser, Ablauf (Schritt 4, Begleitung)"
+  },
+  {
+   "aussage": "Der Zeitrahmen hängt von Position, Fachrichtung und Region ab. Eine realistische Einschätzung geben wir nach dem ersten Gespräch.",
+   "seite": "/fuer-haeuser",
+   "ort": "Für Häuser, Zeitrahmen"
+  },
+  {
+   "aussage": "Ist diese Position unbesetzt, ist der Betrieb betroffen.",
+   "seite": "/fuer-haeuser",
+   "ort": "Für Häuser, Für MVZ-Betreiber (Folgerung)"
+  },
+  {
+   "aussage": "Ihre Anfrage behandeln wir vertraulich.",
+   "seite": "/fuer-haeuser",
+   "ort": "Für Häuser, Mandat besprechen (Einleitung)"
+  },
+  {
+   "aussage": "Ein Gespräch, das nur Sie und uns betrifft.",
+   "seite": "/fuer-aerzte",
+   "ort": "Für Ärzte, Überschrift"
+  },
+  {
+   "aussage": "Wir sprechen Sie an, Sie müssen sich nicht bewerben.",
+   "seite": "/fuer-aerzte",
+   "ort": "Für Ärzte, Einleitung"
+  },
+  {
+   "aussage": "Wer eine Abteilung oder ein Haus führt, möchte Möglichkeiten vertraulich prüfen können. Dafür braucht es Diskretion, und die nehmen wir ernst.",
+   "seite": "/fuer-aerzte",
+   "ort": "Für Ärzte, Einleitung"
+  },
+  {
+   "aussage": "Ihren Namen nennen wir einem Haus erst, wenn Sie ausdrücklich zugestimmt haben.",
+   "seite": "/fuer-aerzte",
+   "ort": "Für Ärzte, So gehen wir mit Ihren Angaben um (Liste)"
+  },
+  {
+   "aussage": "Wir führen keine Kandidatendatenbank.",
+   "seite": "/fuer-aerzte",
+   "ort": "Für Ärzte, So gehen wir mit Ihren Angaben um (Liste)"
+  },
+  {
+   "aussage": "Für ein erstes Gespräch brauchen wir keinen Lebenslauf.",
+   "seite": "/fuer-aerzte",
+   "ort": "Für Ärzte, So gehen wir mit Ihren Angaben um (Liste)"
+  },
+  {
+   "aussage": "Sie hinterlassen Ihren Namen, Ihre Nummer und eine Zeit, zu der wir Sie gut erreichen. Ein Partner ruft Sie zurück. Im ersten Gespräch hören wir zu, erzählen Ihnen, welche Positionen wir begleiten, und Sie entscheiden, ob es einen zweiten Termin gibt.",
+   "seite": "/fuer-aerzte",
+   "ort": "Für Ärzte, Wie ein Gespräch beginnt"
+  },
+  {
+   "aussage": "Wir antworten persönlich. Jede Anfrage behandeln wir vertraulich.",
+   "seite": "/kontakt",
+   "ort": "Kontakt, Einleitung"
+  },
+  {
+   "aussage": "Ihre Angaben behandeln wir vertraulich.",
+   "seite": "/fuer-haeuser",
+   "ort": "Für Häuser, Für Ärzte und Kontakt, Hinweis unter den Formularen"
+  }
+ ],
+ "fragen": [
+  {
+   "gruppe": "Personen",
+   "items": [
+    "Wer sind die Partner bzw. das Gesicht von Doctovip?",
+    "Welcher Werdegang soll gezeigt werden, und gibt es Fotos?",
+    "Ist ein Fotoshooting gewünscht?"
+   ]
+  },
+  {
+   "gruppe": "Konditionen",
+   "items": [
+    "Honorarmodell: Mandat mit fester Vergütung oder Erfolgshonorar?",
+    "Gibt es eine Garantie oder Nachbesetzung?"
+   ]
+  },
+  {
+   "gruppe": "Leistung",
+   "items": [
+    "Werden ausschließlich Festanstellungen vermittelt?",
+    "Soll es Übergangslösungen geben, z. B. über Fairmedics?"
+   ]
+  },
+  {
+   "gruppe": "Zielgruppe",
+   "items": [
+    "Auch MVZ-Gruppen, Klinikverbünde, Investoren?",
+    "Deutschlandweit oder regional?"
+   ]
+  },
+  {
+   "gruppe": "Marke",
+   "items": [
+    "Ist der Name Doctovip final?",
+    "Domain, E-Mail-Adresse, Telefonnummer?",
+    "Ist eine Markenrecherche (DPMA/EUIPO) erfolgt?"
+   ]
+  },
+  {
+   "gruppe": "Verbindung zu Fairmedics",
+   "items": [
+    "Soll sie sichtbar sein oder nur im Impressum stehen?"
+   ]
+  },
+  {
+   "gruppe": "Unternehmen",
+   "items": [
+    "Rechtsträger, Anschrift, Angaben für Impressum und Datenschutz?"
+   ]
+  },
+  {
+   "gruppe": "Referenzen",
+   "items": [
+    "Gibt es bereits Besetzungen auf Leitungsebene, die anonymisiert gezeigt werden dürfen?"
+   ]
+  },
+  {
+   "gruppe": "Inhalte",
+   "items": [
+    "Sollen später Fachartikel (Einblicke) erscheinen?",
+    "Wer liefert die Inhalte?"
+   ]
+  }
+ ],
+ "weggelassen": [
+  {
+   "was": "Partnerprofile",
+   "warum": "Doctovip ist eine neue Marke. Namen, Werdegänge und Fotos liegen nicht vor und werden nicht erfunden."
+  },
+  {
+   "was": "Referenzmandate",
+   "warum": "Es gibt keine bestätigten Besetzungen. Beispiele würden wie Erfolge wirken."
+  },
+  {
+   "was": "Fachartikel (Einblicke)",
+   "warum": "Ohne Autorin oder Autor und fachliche Freigabe wären Artikel erfundene Expertise."
+  },
+  {
+   "was": "Kontaktdaten",
+   "warum": "Telefon, E-Mail, Anschrift und Domain sind nicht bestätigt."
+  },
+  {
+   "was": "Konditionen",
+   "warum": "Honorar, Garantie und Zusatzleistungen sind nicht entschieden."
+  },
+  {
+   "was": "Kundenstimmen",
+   "warum": "Es gibt keine Kundschaft, die zitiert werden könnte. Erfundene Stimmen widersprechen der Marke."
+  }
+ ],
+ "belegt": [
+  {
+   "aussage": "Jedes MVZ braucht eine benannte ärztliche Leitung, die selbst im MVZ ärztlich tätig ist.",
+   "quelle": "§ 95 Abs. 1 SGB V: MVZ sind ärztlich geleitete Einrichtungen. Der ärztliche Leiter muss im MVZ selbst als angestellter Arzt oder Vertragsarzt tätig sein und ist in medizinischen Fragen weisungsfrei.",
+   "url": "https://www.gesetze-im-internet.de/sgb_5/__95.html",
+   "seite": "/",
+   "ort": "Startseite, Positionen (MVZ-Karte); Für Häuser, Für MVZ-Betreiber"
+  },
+  {
+   "aussage": "Ohne ärztliche Leitung kein MVZ.",
+   "quelle": "Zusammenfassung derselben Regelung, § 95 Abs. 1 SGB V.",
+   "url": "https://www.gesetze-im-internet.de/sgb_5/__95.html",
+   "seite": "/",
+   "ort": "Startseite, Positionen (MVZ-Karte)"
+  },
+  {
+   "aussage": "Ein MVZ braucht eine benannte ärztliche Leitung, die selbst im MVZ ärztlich tätig ist.",
+   "quelle": "§ 95 Abs. 1 SGB V (siehe oben).",
+   "url": "https://www.gesetze-im-internet.de/sgb_5/__95.html",
+   "seite": "/fuer-haeuser",
+   "ort": "Für Häuser, Für MVZ-Betreiber"
+  }
+ ],
+ "bildnachweise": [
+  {
+   "datei": "hero-portrait.webp",
+   "motiv": "Mann im dunklen Anzug, freigestellt, Schwarz-Weiß (Stimmungsbild)",
+   "quelle": "https://www.pexels.com/photo/10041269/",
+   "lizenz": "Pexels-Lizenz",
+   "einsatz": "Startseite, Hero"
+  },
+  {
+   "datei": "arbeitsweise.webp",
+   "motiv": "Helle, geschwungene Treppe in weißem Raum, Schwarz-Weiß",
+   "quelle": "https://www.pexels.com/photo/5184791/",
+   "lizenz": "Pexels-Lizenz",
+   "einsatz": "Startseite, Arbeitsweise; Für Ärzte"
+  },
+  {
+   "datei": "mvz.webp",
+   "motiv": "Heller Flur mit Sitzreihe am Fenster, Schwarz-Weiß",
+   "quelle": "https://www.pexels.com/photo/19921278/",
+   "lizenz": "Pexels-Lizenz",
+   "einsatz": "Startseite, MVZ-Karte; Ansatz; Für Häuser"
+  }
+ ]
+}

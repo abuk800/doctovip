@@ -1,28 +1,20 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
-import { Form, type FieldDef } from "@/components/Form";
+import { Form } from "@/components/Form";
 import { Photo } from "@/components/Photo";
+import { arztFields, confidentialNote, draftNotice } from "@/lib/forms";
 
 export const metadata: Metadata = {
   title: "Für Ärzte",
   description:
-    "Vertrauliches Gespräch für Chefärztinnen, Chefärzte und ärztliche Leitungen. Wir sprechen Sie an, Sie müssen sich nicht bewerben.",
-  alternates: { canonical: "/fuer-aerzte" },
-  openGraph: { title: "Für Ärztinnen und Ärzte | Doctovip", url: "/fuer-aerzte" },
+    "Für leitende und geschäftsführende Ärztinnen und Ärzte: ein vertrauliches Gespräch mit Doctovip anfragen.",
+  openGraph: { title: "Für Ärztinnen und Ärzte | Doctovip" },
 };
 
 const zusagen = [
   "Ihren Namen nennen wir einem Haus erst, wenn Sie ausdrücklich zugestimmt haben.",
-  "Ihren Arbeitgeber kontaktieren wir nicht.",
-  "Wir führen keine Kandidatendatenbank. Was Sie uns mitteilen, sieht ausschließlich der verantwortliche Partner.",
-  "Ort und Zeit unserer Gespräche bestimmen Sie.",
-];
-
-const fields: FieldDef[] = [
-  { name: "name", label: "Name", required: true, autoComplete: "name" },
-  { name: "telefon", label: "Telefon", type: "tel", required: true, autoComplete: "tel" },
-  { name: "zeit", label: "Bevorzugte Zeit", type: "select", options: ["Vormittags", "Mittags", "Nachmittags", "Abends", "Nach Vereinbarung"], required: true },
-  { name: "hinweis", label: "Hinweis", type: "textarea", wide: true },
+  "Wir führen keine Kandidatendatenbank.",
+  "Für ein erstes Gespräch brauchen wir keinen Lebenslauf.",
 ];
 
 export default function FuerAerzte() {
@@ -31,8 +23,8 @@ export default function FuerAerzte() {
       <PageHeader title="Ein Gespräch, das nur Sie und uns betrifft.">
         <p className="font-medium text-ink">Wir sprechen Sie an, Sie müssen sich nicht bewerben.</p>
         <p>
-          Wer eine Abteilung oder ein Haus führt, hat meist gute Gründe, dort zu sein. Und trotzdem lohnt es sich zu
-          wissen, welche Möglichkeiten es gibt. Dafür braucht es Vertraulichkeit, und die nehmen wir ernst.
+          Wer eine Abteilung oder ein Haus führt, möchte Möglichkeiten vertraulich prüfen können. Dafür braucht es
+          Diskretion, und die nehmen wir ernst.
         </p>
       </PageHeader>
 
@@ -75,7 +67,6 @@ export default function FuerAerzte() {
                 Sie zurück. Im ersten Gespräch hören wir zu, erzählen Ihnen, welche Positionen wir begleiten, und Sie
                 entscheiden, ob es einen zweiten Termin gibt.
               </p>
-              <p>Einen Lebenslauf benötigen wir dafür nicht.</p>
             </div>
           </div>
         </div>
@@ -88,13 +79,7 @@ export default function FuerAerzte() {
               Vertraulichen Rückruf anfragen
             </h2>
             <div className="mt-12 max-w-measure rounded-panel border border-line bg-paper p-6 md:mt-16 md:p-12">
-              <Form
-                id="arzt"
-                fields={fields}
-                submitLabel="Rückruf anfragen"
-                success="Vielen Dank. Ein Partner ruft Sie zur gewünschten Zeit zurück."
-                note="Ihre Angaben sieht ausschließlich der verantwortliche Partner."
-              />
+              <Form id="arzt" fields={arztFields} submitLabel="Rückruf anfragen" success={draftNotice} note={confidentialNote} />
             </div>
           </div>
         </div>

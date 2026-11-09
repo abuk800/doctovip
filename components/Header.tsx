@@ -50,11 +50,11 @@ export function Header() {
     <header className="pointer-events-none sticky top-0 z-40 pt-4">
       <div className="wrap">
         <div className="pointer-events-auto flex h-nav items-center justify-between rounded-nav border border-line bg-white px-4 md:px-6">
-          <Link href="/" aria-label="Doctovip, zur Startseite">
+          <Link href="/">
             <Logo />
           </Link>
 
-          <nav aria-label="Hauptnavigation" className="hidden items-center gap-8 xl:flex">
+          <nav aria-label="Hauptnavigation" className="hidden items-center gap-8 lg:flex">
             {nav.map((item) => (
               <Link
                 key={item.href}
@@ -67,14 +67,14 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden xl:block">
+          <div className="hidden lg:block">
             <PillLink href="/fuer-haeuser#kontakt">Mandat besprechen</PillLink>
           </div>
 
           <button
             ref={toggleRef}
             type="button"
-            className="-mr-2 h-12 px-4 text-base font-medium text-ink xl:hidden"
+            className="-mr-2 h-12 px-4 text-base font-medium text-ink lg:hidden"
             aria-expanded={open}
             aria-controls="menue"
             onClick={() => setOpen(true)}

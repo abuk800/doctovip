@@ -6,9 +6,8 @@ import { Photo } from "@/components/Photo";
 export const metadata: Metadata = {
   title: "Ansatz",
   description:
-    "Warum Doctovip nur Leitungspositionen besetzt, warum wir wenige Mandate führen und wie die vertrauliche Direktansprache funktioniert.",
-  alternates: { canonical: "/ansatz" },
-  openGraph: { title: "Ansatz | Doctovip", url: "/ansatz" },
+    "Der Ansatz von Doctovip: nur leitende und geschäftsführende ärztliche Positionen in Kliniken und MVZ, kuratiert und diskret.",
+  openGraph: { title: "Ansatz | Doctovip" },
 };
 
 const abschnitte = [
@@ -17,7 +16,7 @@ const abschnitte = [
     titel: "Warum nur Leitungsebene",
     text: [
       "Eine Leitungsposition ist keine größere Version einer Facharztstelle. Wer eine Abteilung, ein Haus oder ein MVZ führt, entscheidet über Personal, Qualität und Kultur. Die Erwartungen der Träger, der Teams und der Kandidatin oder des Kandidaten greifen hier ineinander.",
-      "Diese Besetzungen folgen eigenen Regeln. Die Zahl möglicher Persönlichkeiten ist klein, jede ist in ihrem Haus sichtbar, und ein Wechsel hat Folgen für viele Menschen. Deshalb arbeiten wir ausschließlich auf dieser Ebene und kennen sie genau.",
+      "Diese Besetzungen folgen eigenen Regeln. Die Zahl möglicher Persönlichkeiten ist klein, jede ist in ihrem Haus sichtbar, und ein Wechsel hat Folgen für viele Menschen. Deshalb arbeiten wir ausschließlich auf dieser Ebene.",
     ],
   },
   {
@@ -43,17 +42,17 @@ export default function Ansatz() {
     <>
       <PageHeader title="Wenige Mandate, nur Leitungsebene, ohne Ausschreibung.">
         <p>
-          Unser Ansatz folgt aus der Aufgabe. Eine ärztliche Leitung wird selten über eine Anzeige gefunden. Sie wird
-          gefunden, indem jemand mit Sorgfalt und Diskretion die richtigen Gespräche führt.
+          Unser Ansatz folgt aus der Aufgabe: Leitungspositionen besetzen wir kuratiert und diskret, im persönlichen
+          Gespräch.
         </p>
       </PageHeader>
 
       <div className="wrap pb-24 md:pb-32">
         <Photo
-          src="/images/einblick-2.webp"
-          alt="Schwarz-Weiß-Aufnahme eines lichtdurchfluteten Treppenhauses mit Glasdach"
+          src="/images/mvz.webp"
+          alt="Schwarz-Weiß-Aufnahme eines hellen Flurs mit Sitzreihe am Fenster"
           width={1200}
-          height={750}
+          height={900}
           sizes="(min-width: 1280px) 1152px, 100vw"
           priority
           className="aspect-wide w-full rounded-panel object-cover md:aspect-banner"
@@ -85,7 +84,6 @@ export default function Ansatz() {
                       „Wer eine Abteilung führt, prägt sie länger, als jede Strategie dauert.“
                     </p>
                   </blockquote>
-                  <figcaption className="mt-4 text-sm text-stone">Leitgedanke von Doctovip</figcaption>
                 </figure>
               )}
             </section>

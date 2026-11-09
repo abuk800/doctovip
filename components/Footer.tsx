@@ -6,14 +6,14 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="bg-paper">
-      <div className="wrap grid gap-12 pb-12 pt-24 md:grid-cols-2 xl:grid-cols-12 xl:gap-8">
-        <div className="xl:col-span-4">
-          <Link href="/" aria-label="Doctovip, zur Startseite">
+      <div className="wrap grid gap-12 pb-12 pt-24 md:grid-cols-3 xl:grid-cols-12 xl:gap-8">
+        <div className="xl:col-span-5">
+          <Link href="/">
             <Logo />
           </Link>
           <p className="mt-6 max-w-card text-base">{site.positioning}</p>
         </div>
-        <nav aria-label="Seiten" className="xl:col-span-2 xl:col-start-5">
+        <nav aria-label="Seiten" className="xl:col-span-3 xl:col-start-7">
           <p className="text-sm font-medium text-stone">Seiten</p>
           <ul className="mt-4 space-y-3 text-base">
             {nav.map((n) => (
@@ -38,33 +38,11 @@ export function Footer() {
             ))}
           </ul>
         </div>
-        <div className="xl:col-span-3">
-          <p className="text-sm font-medium text-stone">Kontakt</p>
-          <ul className="mt-4 space-y-3 text-base">
-            <li>
-              <a href={site.phoneHref} className="text-ink hover:text-brass">
-                {site.phone}
-              </a>
-            </li>
-            <li>
-              <a href={`mailto:${site.email}`} className="text-ink hover:text-brass">
-                {site.email}
-              </a>
-            </li>
-            <li className="text-graphite">
-              {site.address.map((l) => (
-                <span key={l} className="block">
-                  {l}
-                </span>
-              ))}
-            </li>
-          </ul>
-        </div>
       </div>
       <div className="wrap">
-        <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 border-t border-line py-8 text-sm text-graphite">
+        <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 border-t border-line py-8">
           <p className="text-sm">© {year} Doctovip</p>
-          <ul className="flex gap-8">
+          <ul className="flex gap-8 text-sm text-graphite">
             <li>
               <Link href="/impressum" className="hover:text-ink">
                 Impressum

@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
-import { Form, type FieldDef } from "@/components/Form";
+import { Form } from "@/components/Form";
 import { Photo } from "@/components/Photo";
-import { positions, site } from "@/lib/site";
+import { confidentialNote, draftNotice, hausFields } from "@/lib/forms";
 
 export const metadata: Metadata = {
   title: "Für Häuser",
   description:
-    "Ärztliche Leitung besetzen, ohne dass die Suche im Haus bekannt wird. Ablauf, Zeitrahmen und vertrauliche Mandatsanfrage für Kliniken, Verbünde und MVZ.",
-  alternates: { canonical: "/fuer-haeuser" },
-  openGraph: { title: "Für Häuser | Doctovip", url: "/fuer-haeuser" },
+    "Für Kliniken und MVZ: ärztliche Leitungs- und Geschäftsführungspositionen diskret besetzen. Mandatsanfrage an Doctovip.",
+  openGraph: { title: "Für Häuser | Doctovip" },
 };
 
 const ablauf = [
@@ -19,25 +18,13 @@ const ablauf = [
   ["Begleitung", "Wir begleiten Vertragsverhandlung und Wechsel und bleiben in den ersten Monaten ansprechbar."],
 ];
 
-const fields: FieldDef[] = [
-  { name: "position", label: "Position", type: "select", options: positions, required: true },
-  { name: "einrichtung", label: "Art der Einrichtung", type: "select", options: ["Klinik", "Klinikverbund", "MVZ", "Sonstige"], required: true },
-  { name: "region", label: "Region", required: true },
-  { name: "zeitrahmen", label: "Gewünschter Zeitrahmen", required: true },
-  { name: "name", label: "Name", required: true, autoComplete: "name" },
-  { name: "funktion", label: "Funktion", required: true, autoComplete: "organization-title" },
-  { name: "email", label: "E-Mail", type: "email", required: true, autoComplete: "email" },
-  { name: "telefon", label: "Telefon", type: "tel", required: true, autoComplete: "tel" },
-  { name: "nachricht", label: "Nachricht", type: "textarea", wide: true },
-];
-
 export default function FuerHaeuser() {
   return (
     <>
       <PageHeader title="Wenn eine ärztliche Leitung neu zu besetzen ist.">
         <p>
-          Sie suchen an der Spitze eines Hauses, einer Abteilung oder eines MVZ. Wir führen die Suche so, dass Ihre
-          Mitarbeitenden davon nichts erfahren, bis Sie es wollen.
+          Sie suchen an der Spitze eines Hauses, einer Abteilung oder eines MVZ. Wir führen die Suche diskret, damit sie
+          im Haus nicht früher bekannt wird, als Sie es wollen.
         </p>
       </PageHeader>
 
@@ -60,27 +47,14 @@ export default function FuerHaeuser() {
         </div>
       </section>
 
-      <section aria-labelledby="zeitrahmen" className="wrap pt-24 md:pt-32">
+      <section aria-labelledby="zeitrahmen" className="wrap section">
         <div data-reveal className="grid gap-8 md:grid-cols-12">
           <h2 id="zeitrahmen" className="text-2xl md:col-span-4 md:text-h2">
             Zeitrahmen
           </h2>
           <p className="max-w-measure md:col-span-7 md:col-start-6">
-            Der Zeitrahmen hängt von Position, Fachgebiet und Region ab. Im ersten Gespräch nennen wir Ihnen eine
-            realistische Einschätzung, auf die Sie planen können.
-          </p>
-        </div>
-      </section>
-
-      <section aria-labelledby="honorar" className="wrap pb-24 pt-24 md:pb-32 md:pt-32">
-        {/* TODO: Honorarmodell und Garantieregelung vom Kunden bestätigen (siehe SAMPLES.md) */}
-        <div data-reveal className="grid gap-8 md:grid-cols-12">
-          <h2 id="honorar" className="text-2xl md:col-span-4 md:text-h2">
-            Honorar und Garantie
-          </h2>
-          <p className="max-w-measure md:col-span-7 md:col-start-6">
-            Honorar und Garantieregelung legen wir vor Mandatsbeginn schriftlich mit Ihnen fest. Die Einzelheiten
-            besprechen wir im ersten Gespräch.
+            Der Zeitrahmen hängt von Position, Fachrichtung und Region ab. Eine realistische Einschätzung geben wir nach
+            dem ersten Gespräch.
           </p>
         </div>
       </section>
@@ -90,16 +64,10 @@ export default function FuerHaeuser() {
           <div data-reveal className="grid gap-12 xl:grid-cols-12 xl:items-center xl:gap-8">
             <div className="xl:col-span-6">
               <h2 id="mvz-titel">Für MVZ-Betreiber</h2>
-              <div className="mt-8 max-w-measure space-y-6">
-                <p>
-                  Ein MVZ braucht eine benannte ärztliche Leitung, die selbst im MVZ ärztlich tätig ist. Ist diese
-                  Position unbesetzt, ist der Betrieb betroffen.
-                </p>
-                <p>
-                  Wir behandeln solche Mandate mit Vorrang und sprechen mit Ihnen auch über Übergangslösungen, damit der
-                  Betrieb gesichert bleibt, während die Besetzung vorbereitet wird.
-                </p>
-              </div>
+              <p className="mt-8 max-w-measure">
+                Ein MVZ braucht eine benannte ärztliche Leitung, die selbst im MVZ ärztlich tätig ist. Ist diese Position
+                unbesetzt, ist der Betrieb betroffen.
+              </p>
             </div>
             <div className="xl:col-span-5 xl:col-start-8">
               <Photo
@@ -120,21 +88,9 @@ export default function FuerHaeuser() {
           <h2 id="kontakt-titel" className="max-w-heading">
             Mandat besprechen
           </h2>
-          <p className="mt-6 max-w-measure">
-            Ihre Anfrage behandeln wir vertraulich. Sie erreichen uns auch telefonisch unter{" "}
-            <a href={site.phoneHref} className="tlink text-body">
-              {site.phone}
-            </a>
-            .
-          </p>
+          <p className="mt-6 max-w-measure">Ihre Anfrage behandeln wir vertraulich.</p>
           <div className="mt-12 rounded-panel border border-line bg-white p-6 md:mt-16 md:p-12">
-            <Form
-              id="haus"
-              fields={fields}
-              submitLabel="Anfrage senden"
-              success="Vielen Dank. Der verantwortliche Partner meldet sich persönlich bei Ihnen."
-              note="Ihre Angaben sieht ausschließlich der verantwortliche Partner."
-            />
+            <Form id="haus" fields={hausFields} submitLabel="Anfrage senden" success={draftNotice} note={confidentialNote} />
           </div>
         </div>
       </section>

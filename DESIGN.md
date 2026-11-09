@@ -1,4 +1,4 @@
-# DESIGN.md — Doctovip (Version 2)
+# DESIGN.md — Doctovip (Version 3)
 
 Einzige Quelle für alle Gestaltungswerte. Im Code (Tailwind-Theme, CSS) werden ausschließlich diese Tokens verwendet. Keine Ad-hoc-Farben, keine freien Schriftgrößen, keine zusätzlichen Radien. `tailwind.config.ts` und `app/globals.css` spiegeln diese Datei 1:1; die Standardpalette und alle Standardskalen sind ersetzt.
 
@@ -17,6 +17,8 @@ Kompositionsvorlage: Framer-Template „MedDocX“ (Aufbau, Bildanteil, Sektions
 | `line` Linie | `#DCDCD8` | Trennlinien auf hell |
 | `brass` Messing | `#7E6236` | Akzent auf hell: Links, feine Linien, Icons, Fokus, Nummern, zweite Hero-Zeile; Fläche nur bei der einen Fakten-Kachel |
 | `brass-light` Messing hell | `#B8A07A` | Nur auf Tinte: Linien, Links, Monogramm |
+
+Version 3: Die Hero-Wortmarke steht bei 6 % Deckkraft (Token `opacity-6`). Die Hero-Info-Karten sind höchstens 15 rem (`max-w-info`) breit, das Hero-Porträt sitzt bei `left-figure` (57 %), damit die Karten die Figur nicht überdecken. Titel der Anlässe-Zeilen: `xl` (1.5 rem), da 1.375 rem nicht in der Skala liegt. Die Desktop-Navigation beginnt ab `lg`, weil sie nur drei Links hat.
 
 Auf Tinte: Text `paper`, Haarlinien `paper` mit 15 % Deckkraft, Sekundärtext `paper` mit 72 %.
 
@@ -50,7 +52,7 @@ Verboten: Verläufe, Glow, Glasmorphismus, radiale Auren, Lila, Cyan, Neon, Beig
 
 ## Abstand (px)
 
-`4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96 / 128 / 160`, dazu `nav` = 72 (Höhe Navigationsleiste), `mono` = 480 (großes Monogramm), `gutter` = 20 (Seitenrand mobil). Seitenrand ab 768: 32, ab 1280: 64. Sektionsabstand mobil 96, Tablet 128, Desktop 160. Über einer Sektionsüberschrift mehr Abstand als darunter.
+`4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96 / 128 / 160`, dazu `nav` = 72 (Höhe Navigationsleiste), `mono` = 480 (großes Monogramm), `gutter` = 20 (Seitenrand mobil). Seitenrand ab 768: 32, ab 1280: 64. Sektionsabstand (Version 3, gekürzt): mobil 64, ab Tablet 128 (vorher mobil 96, Desktop 160). Über einer Sektionsüberschrift mehr Abstand als darunter.
 
 ## Radien
 

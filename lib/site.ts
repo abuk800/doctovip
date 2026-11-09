@@ -1,20 +1,16 @@
-// TODO: Vor Livegang durch echte Kontaktdaten und Domain ersetzen.
+/** Noch nicht bestätigt: Domain, Kontaktdaten und Anschrift. Sie stehen bewusst nirgends auf der Seite (siehe KLAERUNG.md). */
 export const site = {
   name: "Doctovip",
-  url: "https://www.doctovip.de",
-  phone: "+49 30 0000 0000",
-  phoneHref: "tel:+493000000000",
-  email: "kontakt@doctovip.de",
-  address: ["Musterstraße 1", "10000 Berlin"],
-  positioning: "Besetzung ärztlicher Leitungspositionen in Kliniken und MVZ. Persönlich und vertraulich.",
+  positioning: "Besetzung ärztlicher Leitungspositionen in Kliniken und MVZ.",
 };
+
+/** Indexierung erst freigeben, wenn Domain, Inhalte und Marke bestätigt sind (Umgebungsvariable NEXT_PUBLIC_ALLOW_INDEXING=true). */
+export const allowIndexing = process.env.NEXT_PUBLIC_ALLOW_INDEXING === "true";
 
 export const nav = [
   { href: "/ansatz", label: "Ansatz" },
   { href: "/fuer-haeuser", label: "Für Häuser" },
   { href: "/fuer-aerzte", label: "Für Ärzte" },
-  { href: "/partner", label: "Partner" },
-  { href: "/einblicke", label: "Einblicke" },
 ];
 
 export const positions = [

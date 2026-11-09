@@ -21,7 +21,7 @@ function validate(f: FieldDef, value: string): string | null {
       : `Bitte füllen Sie das Feld „${f.label}“ aus.`;
   }
   if (v && f.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) {
-    return "Bitte geben Sie eine gültige E-Mail-Adresse an, zum Beispiel name@beispiel.de.";
+    return "Bitte geben Sie eine gültige E-Mail-Adresse an.";
   }
   if (v && f.type === "tel" && v.replace(/\D/g, "").length < 6) {
     return "Bitte geben Sie eine Telefonnummer an, unter der wir Sie erreichen.";
@@ -60,7 +60,7 @@ export function Form({
       e.currentTarget.querySelector<HTMLElement>(`[name="${firstBad.name}"]`)?.focus();
       return;
     }
-    // TODO: Backend anbinden (Route Handler, E-Mail-Versand oder CRM). Bis dahin werden keine Daten übertragen.
+    // Entwurf: Es wird nichts versendet und nichts gespeichert. TODO: Backend anbinden, sobald das Formular freigegeben ist.
     setDone(true);
     setTimeout(() => doneRef.current?.focus(), 0);
   }

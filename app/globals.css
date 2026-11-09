@@ -29,7 +29,7 @@
 
 @layer components {
   .wrap { @apply mx-auto w-full max-w-page px-gutter md:px-8 xl:px-16; }
-  .section { @apply py-24 md:py-32 xl:py-40; }
+  .section { @apply py-16 md:py-32; }
   .measure { @apply max-w-measure; }
 
   .tlink {

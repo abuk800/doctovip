@@ -4,8 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { RevealInit } from "@/components/RevealInit";
-import { site } from "@/lib/site";
-import { hasSamples } from "@/content";
+import { allowIndexing } from "@/lib/site";
 
 // Selbst gehostet (OFL): Newsreader variable mit opsz- und wght-Achse, Hanken Grotesk 400 und 500.
 // Keine Anfrage an Google-Server, daher DSGVO-unkritisch.
@@ -25,13 +24,12 @@ const text = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
-  title: { default: "Doctovip | Ärztliche Leitungspositionen", template: "%s | Doctovip" },
+  title: { default: "Doctovip | Ärztliche Leitungspositionen in Kliniken und MVZ", template: "%s | Doctovip" },
   description:
-    "Doctovip besetzt ärztliche Leitungs- und Geschäftsführungspositionen in Kliniken und MVZ. Persönlich begleitet, vertraulich geführt, ohne öffentliche Ausschreibung.",
+    "Doctovip vermittelt leitende und geschäftsführende Ärztinnen und Ärzte an Kliniken und MVZ. Kuratiert, reduziert und diskret.",
   openGraph: { siteName: "Doctovip", locale: "de_DE", type: "website" },
-  // Solange Beispielinhalte existieren (content/*, isSample), bleibt die Seite für Suchmaschinen unsichtbar.
-  robots: hasSamples ? { index: false, follow: false } : undefined,
+  // Entwurf: Suchmaschinen erst zulassen, wenn NEXT_PUBLIC_ALLOW_INDEXING=true gesetzt ist (siehe lib/site.ts).
+  robots: allowIndexing ? undefined : { index: false, follow: false },
 };
 
 export const viewport: Viewport = { themeColor: "#F7F7F5", width: "device-width", initialScale: 1 };

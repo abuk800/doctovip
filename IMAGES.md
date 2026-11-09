@@ -6,15 +6,10 @@ Alle Bilder liegen unter `public/images/` als WebP. Quelle für alle: Pexels (Pe
 
 | Datei | Motiv | Quelle (Pexels-Foto-ID) | Einsatz |
 |---|---|---|---|
-| `hero-portrait.webp` | Mann um die 55, graue Haare, dunkler Anzug, ruhiger Blick, freigestellt | https://www.pexels.com/photo/10041269/ | Hero Startseite |
-| `arbeitsweise.webp` | Helle, geschwungene Treppe in weißem Raum | https://www.pexels.com/photo/5184791/ | Arbeitsweise, Für Ärzte |
-| `mvz.webp` | Heller Flur mit Sitzreihe am Fenster | https://www.pexels.com/photo/19921278/ | MVZ-Karte, Für Häuser |
-| `partner-1.webp` | Frau im dunklen Blazer vor hellem Hintergrund | https://www.pexels.com/photo/30479371/ | Partner |
-| `partner-2.webp` | Älterer Mann mit Bart im dunklen Anzug | https://www.pexels.com/photo/7654586/ | Partner |
-| `einblick-1.webp` | Gebäudefassade mit regelmäßigen Fensterreihen | https://www.pexels.com/photo/34165409/ | Einblicke |
-| `einblick-2.webp` | Lichtdurchflutetes Treppenhaus mit Glasdach | https://www.pexels.com/photo/12246538/ | Einblicke, Ansatz |
-| `einblick-3.webp` | Frei schwebende Treppe an Betonwand | https://www.pexels.com/photo/4577688/ | Einblicke |
+| `hero-portrait.webp` | Mann im dunklen Anzug, freigestellt (Stimmungsbild, keine Person von Doctovip) | https://www.pexels.com/photo/10041269/ | Hero Startseite |
+| `arbeitsweise.webp` | Helle, geschwungene Treppe in weißem Raum | https://www.pexels.com/photo/5184791/ | Startseite Arbeitsweise, Für Ärzte |
+| `mvz.webp` | Heller Flur mit Sitzreihe am Fenster | https://www.pexels.com/photo/19921278/ | Startseite MVZ-Karte, Ansatz, Für Häuser |
 
-Hinweis zu den Personenbildern: Die abgebildeten Personen sind Models aus Stockfotos und stehen in keinem Zusammenhang mit den Beispielnamen in `content/partners.ts`. Vor Livegang durch echte Partnerporträts ersetzen.
+Hinweis: Die Person im Hero-Bild ist ein Stockfoto-Model ohne Bezug zu Doctovip. Der Alt-Text beschreibt nur die Stimmung. Vor Livegang durch eigene Aufnahmen ersetzen. Die Bilder aus Version 2 (Partnerporträts, Einblicke) sind gelöscht.
 
 Regeln: keine Kittel, Stethoskope, Händeschüttel- oder Teamfotos, keine Overlays über Bildern, keine Logos. Fehlt ein Bild, zeigt `components/Photo.tsx` eine Graphit-Fläche mit Monogramm, nie eine leere `src`.
